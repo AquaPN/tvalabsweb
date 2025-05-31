@@ -1,0 +1,47 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease;
+}
+
+.loader-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.2s ease;
+}
+
+.rocket-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s ease-in;
+}
+
+.rocket-wrapper.launch {
+  transform: translate(-50%, -1000px);
+}
