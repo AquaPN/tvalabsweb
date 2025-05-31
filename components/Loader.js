@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import "./loader.css";
+import "./Loader.css";
 import rocketImg from "@/public/rocket.png"; // or .ico, whichever you prefer
 import Image from "next/image";
 
