@@ -79,14 +79,8 @@ const founders = [
   {
     name: "Shreya Gantayat",
     role: "Lead",
-    photo: "./shreya.png", // Corrected: Directly reference the variable
+    photo: "./shreya.jpg", // Corrected: Directly reference the variable
     bio: "Cyber.",
-  },
-  {
-    name: "Niket Girdhar",
-    role: "Lead",
-    photo: "./niket.png", // Corrected: Directly reference the variable
-    bio: "Network.",
   },
 ];
 
@@ -205,12 +199,42 @@ export default function Home() {
 
               <div className="services-grid">
                 {[
-                  { name: "MVP Development", Icon: Rocket },
-                  { name: "Pitch Deck Creation", Icon: Presentation },
-                  { name: "Startup Branding", Icon: Palette },
-                  { name: "Early GTM Support", Icon: Package },
-                  { name: "Founder Mentoring", Icon: Brain },
-                  { name: "Fundraising Guidance", Icon: DollarSign },
+                  {
+                    name: "MVP Development",
+                    Icon: Rocket,
+                    description:
+                      "Turn your idea into a market-ready product—fast, lean, and investor-friendly.",
+                  },
+                  {
+                    name: "Business Analytics",
+                    Icon: Presentation,
+                    description:
+                      "Make smarter decisions with data-driven insights tailored to your growth stage.",
+                  },
+                  {
+                    name: "Startup Branding",
+                    Icon: Palette,
+                    description:
+                      "Craft a bold, memorable brand that wins hearts and builds trust from day one.",
+                  },
+                  {
+                    name: "Early GTM Support",
+                    Icon: Package,
+                    description:
+                      "Accelerate your go-to-market journey with tested strategies and real traction.",
+                  },
+                  {
+                    name: "Founder Mentoring",
+                    Icon: Brain,
+                    description:
+                      "Get hands-on guidance from founders who've been in your shoes and scaled.",
+                  },
+                  {
+                    name: "Fundraising Guidance",
+                    Icon: DollarSign,
+                    description:
+                      "Raise smart, raise early—with decks, strategy, and VC-backed storytelling.",
+                  },
                 ].map((service, index) => (
                   <motion.div
                     key={index}
@@ -223,9 +247,7 @@ export default function Home() {
                   >
                     <service.Icon className="service-icon" />
                     <h3 className="service-title">{service.name}</h3>
-                    <p className="service-description">
-                      High-impact services designed for startup success.
-                    </p>
+                    <p className="service-description">{service.description}</p>
                   </motion.div>
                 ))}
               </div>

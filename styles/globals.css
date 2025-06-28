@@ -576,7 +576,7 @@ h6 {
 /* --- Meet the Founders Section --- */
 
 .meet-founders-section {
-  background : linear-gradient(to bottom, #f8fdf9 65%, #d1fae5 90%);
+  background: linear-gradient(to bottom, #f8fdf9 65%, #d1fae5 90%);
   padding: 80px 40px;
   text-align: center;
 }
@@ -587,14 +587,14 @@ h6 {
   gap: 32px;
   max-width: 1000px;
   margin: 40px auto 0;
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .founders-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
-
 .founder-card {
   background-color: white;
   border-radius: 16px;
@@ -613,8 +613,8 @@ h6 {
 }
 
 .founder-photo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 9999px;
   object-fit: cover;
   margin: 0 auto 16px;
